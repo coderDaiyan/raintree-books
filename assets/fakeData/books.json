@@ -1,0 +1,44 @@
+[
+  {
+    "name": "To Kill A Mockingbird",
+    "author": "Harper Lee",
+    "published": "1995",
+    "rating": "4.5",
+    "cover": "https://lh3.googleusercontent.com/proxy/Fm9DiS5adr8I9uh0dwJJDxk9y17I88w5P1WsqQ30qTQyIdTDXYs65zStAXxYi1YBtDAQ_E5F34ZR-Ag1a_XfyOJ-7zNaLVEWVg8"
+  },
+  {
+    "name": "Great Expectations",
+    "author": "Charles Dickens",
+    "published": "2005",
+    "rating": "4.8",
+    "cover": "https://www.kablewala.com.bd/images/detailed/181/45_gszk-wv.jpg"
+  },
+  {
+    "name": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne",
+    "published": "2002",
+    "rating": "4.7",
+    "cover": "https://www.keystoneschool.org/wp-content/uploads/2019/12/Scarlet-Letter-e1575588839745.jpg"
+  },
+  {
+    "name": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "published": "2015",
+    "rating": "5.0",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg"
+  },
+  {
+    "name": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "published": "2015",
+    "rating": "5.0",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg"
+  },
+  {
+    "name": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "published": "2015",
+    "rating": "5.0",
+    "cover": "https://eloquentjavascript.net/img/cover.jpg"
+  }
+]
