@@ -1,32 +1,44 @@
 import React from "react";
 import {
-  SafeAreaView,
   View,
   FlatList,
   StyleSheet,
   Text,
   StatusBar,
-  Image,
+  Image
+ 
 } from "react-native";
+
+import { TouchableOpacity } from "react-native-gesture-handler";
 import Allbooks from "../assets/fakeData/books.json";
-import { bestSeller } from "./BestSeller";
+import {BestSeller} from "./BestSeller"
 
-const Item = ({ item }) => (
-  <View style={styles.item}>
-    <Image
-      source={{ uri: item.cover }}
-      resizeMode="cover"
-      style={{ width: 170, height: 210, borderRadius: 5 }}
-    ></Image>
-  </View>
-);
+export default function Home ({ navigation}) {
 
-export default function Home () {
+const bestSeller = ({item}) => {
+  return(
+      <BestSeller item={item} navigation={navigation}/>)
+}
+  const Item = ({ item }) => (
+    <TouchableOpacity style={styles.item} onPress={() =>  navigation.navigate("BookDetail",{
+      book:item
+    })}>
+      <Image
+        source={{ uri: item.cover }}
+        resizeMode="cover"
+        style={{ width: 170, height: 210, borderRadius: 5 }}
+      ></Image>
+    </TouchableOpacity>
+  );
   const renderItem = ({ item }) => <Item item={item} />;
 
   return (
     <View style={styles.container}>
-      <View style={{ flex: 3 }}>
+    <View style={{flexDirection:"row",justifyContent:"space-between",paddingHorizontal:11,backgroundColor:"#46597a",paddingVertical:12,marginBottom:5}}>
+      <Text style={{color:"white",fontSize:20}}>Good morning</Text>
+      <Text style={{color:"white",fontSize:20}}>Sakib Ahmed</Text>
+    </View>
+      <View style={{ flex: 3.5 }}>
         <Text style={{ fontSize: 30, marginLeft: 15 }}>My book</Text>
         <FlatList
           data={Allbooks}
@@ -53,7 +65,7 @@ export default function Home () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 40,
+    paddingTop: 20,
     marginTop: StatusBar.currentHeight || 0,
   },
   item: {
