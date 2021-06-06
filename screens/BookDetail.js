@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import {
-  BackHandler,
   Text,
   Image,
   ImageBackground,
@@ -12,11 +11,15 @@ import {
 import { FontAwesome5,Feather } from '@expo/vector-icons';
 import Allbooks from "../assets/fakeData/books.json";
 
-const BookDetail = () => {
-   const [book, setBook] = useState(null);
-  useEffect(() => {
-    setBook[Allbooks[0]];
-  }, [book]);
+const BookDetail = ({route,navigation}) => {
+  const {book:myBook} = route.params;
+   const [book, setBook] = useState(myBook);
+
+  // useEffect(() => {
+
+  //   let {book} = route.params;
+  //   setBook[book]
+  // }, []);
 
     const LineDivider = () => {
         return (
@@ -43,7 +46,7 @@ const BookDetail = () => {
         >
           <TouchableOpacity style={{ marginLeft: 10 }}>
          
-            <Feather name="arrow-left" size={24} color="black" />
+            <Feather name="arrow-left" size={24} color="black" onPress={()=> navigation.goBack()} />
 
           </TouchableOpacity>
           <View
@@ -62,25 +65,25 @@ const BookDetail = () => {
         </View>
         {/* Book cover */}
         <View style={{flex:5,paddingTop:10,alignItems:"center"}}>
-        <Image source={{uri: Allbooks[1].cover}} resizeMode="contain" style={{ width:220,height:"auto", flex:1}}/>
+        <Image source={{uri: book?.cover}} resizeMode="contain" style={{ width:220,height:"auto", flex:1}}/>
 
         </View>
         {/* Name and author */}
         <View style={{flex:1.8,alignItems:"center",justifyContent:"center"}}>
-        <Text style={{fontSize:18,fontWeight:"bold"}}>{Allbooks[1].name}</Text>
-        <Text style={{fontSize:18,fontWeight:"400"}}>{Allbooks[1].author}</Text> 
+        <Text style={{fontSize:18,fontWeight:"bold"}}>{book?.name}</Text>
+        <Text style={{fontSize:18,fontWeight:"400"}}>{book?.author}</Text> 
 
         </View>
         <View style={{flexDirection:"row",paddingVertical:20,borderRadius:5,backgroundColor:"#292827", opacity:0.8, margin:20}}>
         {/* Rating */}
             <View style={{flex:1,alignItems:"center"}}>
-                <Text style={{color:"white",fontSize:14}}>{Allbooks[1].rating}</Text>
+                <Text style={{color:"white",fontSize:14}}>{book?.rating}</Text>
                 <Text style={{color:"white",fontSize:14}}>Rating</Text>
             </View>
             <LineDivider/>
             {/* Pages */}
             <View style={{flex:1,alignItems:"center"}}>
-                <Text style={{color:"white",fontSize:14}}>200</Text>
+                <Text style={{color:"white",fontSize:14}}>{book?.pages}</Text>
                 <Text style={{color:"white",fontSize:14}}>Pages</Text>
             </View>
             {/* Language */}

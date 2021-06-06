@@ -5,6 +5,7 @@
     "name": "Great Expectations",
     "author": "Charles Dickens",
     "published": "2005",
+    "pages":350,
     "rating": "4.8",
     "cover": "https://www.kablewala.com.bd/images/detailed/181/45_gszk-wv.jpg"
   },
@@ -14,6 +15,7 @@
     "author": "Nathaniel Hawthorne",
     "published": "2002",
     "rating": "4.7",
+    "pages":200,
     "cover": "https://www.keystoneschool.org/wp-content/uploads/2019/12/Scarlet-Letter-e1575588839745.jpg"
   },
   {
@@ -22,21 +24,16 @@
     "author": "Douglas Crockford",
     "published": "2015",
     "rating": "5.0",
+    "pages":250,
     "cover": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg"
   },
+ 
   {
     "id":4,
-    "name": "JavaScript: The Good Parts",
-    "author": "Douglas Crockford",
-    "published": "2015",
-    "rating": "5.0",
-    "cover": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg"
-  },
-  {
-    "id":5,
     "name": "Eloquent JavaScript",
     "author": "Marijn Haverbeke",
     "published": "2015",
+    "pages":400,
     "rating": "5.0",
     "cover": "https://eloquentjavascript.net/img/cover.jpg"
   }

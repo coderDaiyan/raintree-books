@@ -1,8 +1,11 @@
 import React from 'react';
-import { Button, Image, Text, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
-export const bestSeller = ({item}) => {
+export const BestSeller = ({item,navigation}) => {
     return(
+        <TouchableOpacity  onPress={() => navigation.navigate("BookDetail",{
+            book:item
+        })}>
         <View style={{ flex:1, flexDirection:"row",marginLeft:15,marginBottom:15,marginRight:0}}>
         <View style={{flex:3.5}} >
         <Image
@@ -29,6 +32,7 @@ export const bestSeller = ({item}) => {
         </View>
 
         </View>
+        </TouchableOpacity>
 
     )
 
